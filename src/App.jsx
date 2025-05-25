@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import Body from './components/Body';
 
 function App() {
 
@@ -9,10 +10,11 @@ function App() {
     <>
     <BrowserRouter basename='/'>
       <Routes>
+        <Route path="/" element={<Body/>}/>
         <Route path="/login" element={<Login/>}/>
       </Routes>
     </BrowserRouter>
-    <Navbar/>
+    
     </>
   )
 }
